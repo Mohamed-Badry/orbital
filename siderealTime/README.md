@@ -1,6 +1,6 @@
 ## Sidereal Time
 
-`sidereal_time.py`: python script that applies algorithm 5.3 from the book Orbital Mechanics for Engineering Students.
+`sidereal_time.py`: python script that applies algorithm 5.3 from the book Orbital Mechanics for Engineering Students to calculate local sidereal time from date, time, and east longitude of the site.
 
 `SiderealGUI.py`: streamlit web app that takes input and uses the functions in `sidereal_time.py` to calculate the sidereal time.
 
