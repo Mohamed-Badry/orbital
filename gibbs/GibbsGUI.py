@@ -6,7 +6,7 @@ from inspect import getsource
 
 
 def get_vector_input(col, label):
-    with col.expander(f'$ \\vec {label[0]}_{label[1]} $'):
+    with col.expander(f'$ \\vec {label[0]}_{label[1]}  \\space\\space (km)$'):
         x = st.number_input("$x$", key=f"{label}_x")
         y = st.number_input("$y$", key=f"{label}_y")
         z = st.number_input("$z$", key=f"{label}_z")
@@ -32,12 +32,12 @@ def main():
 
         try:
             result = gibbs(r1, r2, r3)
-            st.write(f'$ h = {result[0]}$')
-            st.write(f'$ i = {result[1]} $')
-            st.write(f'$ \\Omega = {result[2]} $')
+            st.write(f'$ h = {result[0]} \\space (km^2/s)$')
+            st.write(f'$ i = {result[1]}\\degree $')
+            st.write(f'$ \\Omega = {result[2]}\\degree $')
             st.write(f'$ e = {result[3]} $')
-            st.write(f'$ \\omega = {result[4]} $')
-            st.write(f'$ \\theta = {result[5]} $')
+            st.write(f'$ \\omega = {result[4]}\\degree $')
+            st.write(f'$ \\theta = {result[5]}\\degree $')
         except ValueError as e:
             st.error(e.args[0] +
                      '\nTry values for vectors that lie in the same plane.')
