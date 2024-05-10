@@ -30,7 +30,7 @@ def main():
         result = round(sidereal_time(date, time, lamda), 2)
         st.write(r"$\textsf{\normalsize The local sidereal time is:}$")
         # Increase font size and change color
-        st.write(f"<span style='font-size: 24px; color: #f23d30;'>{result}&deg; </span>",
+        st.write(f"<span style='font-size: 24px; color: #e24d3f;'>{result}&deg; </span>",
                  unsafe_allow_html=True)
 
     # display the code of the functions
